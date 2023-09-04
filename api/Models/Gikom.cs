@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace api.Models;
+[Table("Gikom")]
+
+public partial class Gikom
+{
+    public int Id { get; set; }
+
+    public int BildiriId { get; set; }
+
+    public DateTime? KayitTarihi { get; set; }
+
+    public DateTime? GuncellemeTarihi { get; set; }
+
+    public virtual Bildiri Bildiri { get; set; } = null!;
+}
